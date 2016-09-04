@@ -146,9 +146,9 @@ def main():
         for function_name in functions:
             print(functions[function_name]())
     elif(args['country']):
-        printFunction = hasattr(countries, args['country'])
-        if(hasattr(countries, args['country'])):
-            print(getattr(countries, args['country'])()),
+        printFunction = hasattr(countries, args['country'].lower())
+        if(hasattr(countries, args['country'].lower())):
+            print(getattr(countries, args['country'].lower())()),
         else:
             print ('Flag not implemented')
 
